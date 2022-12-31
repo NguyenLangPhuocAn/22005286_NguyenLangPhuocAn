@@ -45,9 +45,10 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                         MessageBox.Show("Cập Nhật Mật Khẩu Không Thành Công","Thông Báo");
                     }
                     if (rec != false)
-                        MessageBox.Show("Cập Nhật Mật Khẩu Thành Công", "Thông Báo");
+                        MessageBox.Show("Cập Nhật Mật Khẩu Thành Công", "Thông Báo");                 
                     else
                         MessageBox.Show("Cập Nhật Mật Khẩu Không Thành Công", "Thông Báo");
+                    Txt_Password.Clear();
                 }
             }
         }
