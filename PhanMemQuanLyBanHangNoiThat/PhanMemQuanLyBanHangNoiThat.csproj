@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E55F5472-3D4F-49D6-9FA9-7F1CF0E7CCE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PhanMemQuanLyBanHangNoiThat</RootNamespace>
+    <AssemblyName>PhanMemQuanLyBanHangNoiThat</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PhanMemQuanLyBanHangNoiThat.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PhanMemQuanLyBanHangNoiThat.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\HoaDon.cs" />
+    <Compile Include="Controls\KhachHang.cs" />
+    <Compile Include="Controls\NhaCC.cs" />
+    <Compile Include="Controls\NhanVien.cs" />
+    <Compile Include="Controls\ThongKe.cs" />
+    <Compile Include="Controls\Userlogin.cs" />
+    <Compile Include="Controls\VatTu.cs" />
+    <Compile Include="Models\DataProvider.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmBaoCaoTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmBaoCaoTK.Designer.cs">
+      <DependentUpon>FrmBaoCaoTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmCapLaiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmCapLaiMK.Designer.cs">
+      <DependentUpon>FrmCapLaiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmDatLaiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmDatLaiMK.Designer.cs">
+      <DependentUpon>FrmDatLaiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FrmQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmQuanLy.Designer.cs">
+      <DependentUpon>FrmQuanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmQuanLyHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmQuanLyHD.Designer.cs">
+      <DependentUpon>FrmQuanLyHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmQuanLyKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmQuanLyKH.Designer.cs">
+      <DependentUpon>FrmQuanLyKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmQuanLyNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmQuanLyNhaCungCap.Designer.cs">
+      <DependentUpon>FrmQuanLyNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmQuanLyNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmQuanLyNV.Designer.cs">
+      <DependentUpon>FrmQuanLyNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmQuanLyVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmQuanLyVatTu.Designer.cs">
+      <DependentUpon>FrmQuanLyVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmQuenMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmQuenMK.Designer.cs">
+      <DependentUpon>FrmQuenMK.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\FrmBaoCaoTK.resx">
+      <DependentUpon>FrmBaoCaoTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmCapLaiMK.resx">
+      <DependentUpon>FrmCapLaiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmDatLaiMK.resx">
+      <DependentUpon>FrmDatLaiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmQuanLy.resx">
+      <DependentUpon>FrmQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmQuanLyHD.resx">
+      <DependentUpon>FrmQuanLyHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmQuanLyKH.resx">
+      <DependentUpon>FrmQuanLyKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmQuanLyNhaCungCap.resx">
+      <DependentUpon>FrmQuanLyNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmQuanLyNV.resx">
+      <DependentUpon>FrmQuanLyNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmQuanLyVatTu.resx">
+      <DependentUpon>FrmQuanLyVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmQuenMK.resx">
+      <DependentUpon>FrmQuenMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase\DbQuanLyBanHangNoiThat.sql" />
+    <Content Include="Resources\1814107_lock_padlock_secure_icon.png" />
+    <Content Include="Resources\4205906.ico" />
+    <Content Include="Resources\about.ico" />
+    <Content Include="Resources\back.ico" />
+    <Content Include="Resources\close.ico" />
+    <Content Include="Resources\component.ico" />
+    <Content Include="Resources\dollar.ico" />
+    <Content Include="Resources\first.ico" />
+    <Content Include="Resources\forward.ico" />
+    <Content Include="Resources\help.ico" />
+    <Content Include="Resources\how-to.ico" />
+    <Content Include="Resources\last.ico" />
+    <Content Include="Resources\list.ico" />
+    <Content Include="Resources\male.ico" />
+    <Content Include="Resources\modify.ico" />
+    <Content Include="Resources\product.ico" />
+    <Content Include="Resources\report.ico" />
+    <Content Include="Resources\save.ico" />
+    <Content Include="Resources\spectrum-rainbow-colors-fading-pixel-square-modern-abstract-background-pattern-vertical-isolated-white-216525005.jpg" />
+    <Content Include="Resources\System.ico" />
+    <Content Include="Resources\turn_off.ico" />
+    <Content Include="Resources\user_group.ico" />
+    <Content Include="Resources\Vattu.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\shop.png" />
+    <None Include="Resources\truck-side.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\shopping-cart.png" />
+    <None Include="Resources\users.png" />
+    <None Include="Resources\home %282%29.png" />
+    <None Include="Resources\50875791.png" />
+    <None Include="Resources\5087607.png" />
+    <None Include="Resources\document-signed.png" />
+    <None Include="Resources\arrow.jpg" />
+    <Content Include="Resources\Graphicloads-Flat-Finance-Person.ico" />
+    <None Include="Resources\find.ico" />
+    <None Include="Resources\delete.ico" />
+    <None Include="Resources\bill.ico" />
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
