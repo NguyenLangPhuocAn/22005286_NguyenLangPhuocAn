@@ -28,7 +28,6 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
                 MessageBox.Show("Không Có Hóa Đơn Nào Trong Ngày Hôm Nay");
                 this.Close();
             }
