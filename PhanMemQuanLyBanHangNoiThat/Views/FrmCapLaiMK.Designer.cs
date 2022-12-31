@@ -32,13 +32,13 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCapLaiMK));
             this.Txt_Password = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Lb_MK = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.Lb1 = new System.Windows.Forms.Label();
             this.Btn_XacNhan = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Lb_MaNV = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Txt_MaNV = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
@@ -67,7 +67,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Azure;
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.Lb_MK);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.Txt_Password);
             this.panel3.Location = new System.Drawing.Point(6, 109);
@@ -75,16 +75,16 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.panel3.Size = new System.Drawing.Size(517, 48);
             this.panel3.TabIndex = 30;
             // 
-            // label3
+            // Lb_MK
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Location = new System.Drawing.Point(61, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 10);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Mật Khẩu:";
+            this.Lb_MK.AutoSize = true;
+            this.Lb_MK.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Lb_MK.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Lb_MK.Location = new System.Drawing.Point(61, 9);
+            this.Lb_MK.Name = "Lb_MK";
+            this.Lb_MK.Size = new System.Drawing.Size(48, 10);
+            this.Lb_MK.TabIndex = 3;
+            this.Lb_MK.Text = "Mật Khẩu:";
             // 
             // pictureBox3
             // 
@@ -134,7 +134,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.Lb_MaNV);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.Txt_MaNV);
             this.panel2.Location = new System.Drawing.Point(6, 55);
@@ -142,16 +142,16 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.panel2.Size = new System.Drawing.Size(517, 48);
             this.panel2.TabIndex = 11;
             // 
-            // label1
+            // Lb_MaNV
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(61, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 10);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Mã Nhân Viên:";
+            this.Lb_MaNV.AutoSize = true;
+            this.Lb_MaNV.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Lb_MaNV.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Lb_MaNV.Location = new System.Drawing.Point(61, 10);
+            this.Lb_MaNV.Name = "Lb_MaNV";
+            this.Lb_MaNV.Size = new System.Drawing.Size(65, 10);
+            this.Lb_MaNV.TabIndex = 2;
+            this.Lb_MaNV.Text = "Mã Nhân Viên:";
             // 
             // pictureBox2
             // 
@@ -207,13 +207,13 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
 
         private System.Windows.Forms.TextBox Txt_Password;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Lb_MK;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label Lb1;
         private System.Windows.Forms.Button Btn_XacNhan;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Lb_MaNV;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox Txt_MaNV;
     }

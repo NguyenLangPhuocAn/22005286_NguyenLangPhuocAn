@@ -72,6 +72,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 int MaNV = Convert.ToInt32(dbmax.Rows[0]["MaNV"]) + 1;
                 Txt_MaNV.Text = Convert.ToString(MaNV);
                 Txt_MaNV.ReadOnly = true;
+                Btn_CapMK.Enabled = false;
                 Btn_Them.Text = "Xác Nhận";
             }
             else if (Btn_Them.Text == "Xác Nhận")
@@ -114,6 +115,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                             Btn_Tim.Enabled = true;
                             Btn_Xoa.Enabled = true;
                             Txt_MaNV.ReadOnly = false;
+                            Btn_CapMK.Enabled = true;
                             Btn_Them.Text = "Thêm";
                         }
                     }
@@ -131,6 +133,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 Txt_Ten.ReadOnly = true;
                 DTP_NS.Enabled = false;
                 CB_CV.Enabled = false;
+                Btn_CapMK.Enabled = false;
                 Txt_MaNV.Enabled = false;
                 Btn_Xoa.Text = "Xác Nhận";
             }
@@ -172,6 +175,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 Btn_Them.Enabled = true;
                 Txt_Ten.ReadOnly = false;
                 DTP_NS.Enabled = true;
+                Btn_CapMK.Enabled = true;
                 Txt_MaNV.Enabled = true;
                 CB_CV.Enabled = true;
                 Btn_Xoa.Text = "Xóa";
@@ -186,6 +190,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 Btn_Tim.Enabled = false;
                 Btn_Them.Enabled = false;
                 Txt_MaNV.ReadOnly = true;
+                Btn_CapMK.Enabled = false;
                 Btn_Sua.Text = "Xác Nhận";
             }
 
@@ -232,6 +237,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                                 Btn_Xoa.Enabled = true;
                                 Btn_Tim.Enabled = true;
                                 Btn_Them.Enabled = true;
+                                Btn_CapMK.Enabled = true;
                                 Txt_MaNV.ReadOnly = false;
                                 Btn_Sua.Text = "Sửa";
                             }
@@ -292,32 +298,51 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 }
                 else
                 {
-                    DataTable db = (DataTable)DGV_NV.DataSource;
-                    db.DefaultView.RowFilter = String.Format("MaNV ='{0}'", Txt_MaNV.Text);
-                    if (DGV_NV.Rows.Count == 0)
+                    bool rec = false;
+                    foreach (DataGridViewRow row in DGV_NV.Rows)
+                    {
+                        if (Txt_MaNV.Text == row.Cells[0].Value.ToString())
+                        {
+                            rec = true;
+                        }
+                    }
+                    if (rec != true)
                     {
                         MessageBox.Show("Không Có Nhân Viên Này", "Thông Báo");
                     }
                     else
                     {
-                        char[] words = "abcdefghjklmnopqrstuwxyzABCDEFGHJKLMNOPRQWIEUROTXZCVB".ToCharArray();
-                        Random ran = new Random();
-                        string Pass = "";
-                        for (int i = 0; i <= 5; i++)
+                        rec = true;
+                        foreach (DataGridViewRow row in DGV_CapMK.Rows)
                         {
-                            Pass = Pass + words[ran.Next(0, words.Length)].ToString();
+                            if (Txt_MaNV.Text == row.Cells[0].Value.ToString())
+                            {
+                                rec = false;
+                            }
                         }
-                        MessageBox.Show("Vui Lòng Viết Lại Pass: " + Pass, "Thông Báo");
-                        try
+                        if (rec != false)
                         {
-                            nv.CapMK(Txt_MaNV.Text, Pass);
+                            char[] words = "abcdefghjklmnopqrstuwxyzABCDEFGHJKLMNOPRQWIEUROTXZCVB".ToCharArray();
+                            Random ran = new Random();
+                            string Pass = "";
+                            for (int i = 0; i <= 5; i++)
+                            {
+                                Pass = Pass + words[ran.Next(0, words.Length)].ToString();
+                            }
+                            MessageBox.Show("Vui Lòng Viết Lại Pass: " + Pass, "Thông Báo");
+                            try
+                            {
+                                nv.CapMK(Txt_MaNV.Text, Pass);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Không Cấp Mật Khẩu Được", "Thông Báo");
+                            }
+                            load();
                         }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Không Cấp Mật Khẩu Được", "Thông Báo");
-                        }
+                        else
+                            MessageBox.Show("Nhân Viên Đã Có Mật Khẩu", "Thông Báo");
                     }
-                    load();
                 }
             }
         }

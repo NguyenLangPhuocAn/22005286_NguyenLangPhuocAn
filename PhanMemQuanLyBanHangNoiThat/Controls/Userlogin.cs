@@ -28,24 +28,23 @@ namespace PhanMemQuanLyBanHangNoiThat.Controls
             else
                 return false;
         }
-        public bool QuenMK(String MaNV)
+        public bool CheckNVQuenMK(String MaNV, DateTime NgaySinh)
         {
             int rec = 0;
             if (Db.connect())
             {
-                string strcmd = "update Users set GhiChu=N'Cấp Lại Mật Khẩu' where MaNV=@MaNV";
+                string strcmd = "select count(*) from NhanVien where MaNV=@MaNV And NgaySinh=@NgaySinh";
                 SqlCommand Cmd = new SqlCommand(strcmd, Db.connection);
                 Cmd.Parameters.Add(new SqlParameter("@MaNV", MaNV));
-                rec = (int)Cmd.ExecuteNonQuery();
+                Cmd.Parameters.Add(new SqlParameter("@NgaySinh", NgaySinh));
+                rec = (int)Cmd.ExecuteScalar();
             }
             else
             {
                 rec = -1;
             }
             if (rec == 1)
-            {
                 return true;
-            }
             else
                 return false;
         }
@@ -56,15 +55,29 @@ namespace PhanMemQuanLyBanHangNoiThat.Controls
             {
                 string strcmd = "update Users set Passwords=@Passwords,GhiChu='' where MaNV=@MaNV";
                 SqlCommand Cmd = new SqlCommand(strcmd, Db.connection);
-                Cmd.Parameters.Add(new SqlParameter("@MaNV",MaNV));
-                Cmd.Parameters.Add(new SqlParameter("@Passwords",Password));
+                Cmd.Parameters.Add(new SqlParameter("@MaNV", MaNV));
+                Cmd.Parameters.Add(new SqlParameter("@Passwords", Password));
                 rec = (int)Cmd.ExecuteNonQuery();
             }
             else
             {
+
                 rec = -1;
             }
             if (rec == 1)
+                return true;
+            else
+                return false;
+        }
+        public bool UpdatePassWordChoNhanVienQuen(string MaNV,String PassWord)
+        {
+            Db.connect();
+            string strcmd = "update Users set Passwords=@Passwords,GhiChu='' where MaNV =@MaNV";
+            SqlCommand Cmd = new SqlCommand(strcmd, Db.connection);
+            Cmd.Parameters.Add(new SqlParameter("@MaNV", MaNV));
+            Cmd.Parameters.Add(new SqlParameter("@Passwords", PassWord));
+            int getlogin = (int)Cmd.ExecuteNonQuery();
+            if (getlogin == 1)
                 return true;
             else
                 return false;
@@ -84,18 +97,16 @@ namespace PhanMemQuanLyBanHangNoiThat.Controls
         public string layquyen(string MaNV)
         {
             string cv = "";
-            SqlCommand cmd = new SqlCommand("SELECT MaCV FROM NhanVien WHERE MaNV ='" + MaNV + "'", Db.connection);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt != null)
+            string strcmd = "SELECT MaCV FROM NhanVien WHERE MaNV =@MaNV";
+            SqlCommand Cmd = new SqlCommand(strcmd, Db.connection);
+            Cmd.Parameters.Add(new SqlParameter("@MaNV", MaNV));
+            SqlDataReader reader = Cmd.ExecuteReader();
+            if (reader.Read())
             {
-                foreach (DataRow dr in dt.Rows)
-                {
-                    cv = dr["MaCV"].ToString();
-                }
+                cv = Convert.ToString(reader.GetInt32(0));
             }
             return cv;
         }
+
     }
 }

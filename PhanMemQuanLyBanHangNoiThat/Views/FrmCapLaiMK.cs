@@ -74,16 +74,16 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
 
         private void Txt_MaNV_Enter(object sender, EventArgs e)
         {
-            label1.Text = "";
+            Lb_MaNV.Text = "";
             if (Txt_Password.TextLength == 0)
-                label3.Text = "Mật Khẩu";
+                Lb_MK.Text = "Mật Khẩu";
         }
 
         private void Txt_Password_Enter(object sender, EventArgs e)
         {
-            label3.Text = "";
+            Lb_MK.Text = "";
             if (Txt_MaNV.TextLength == 0)
-                label1.Text = "Mã Nhân Viên";
+                Lb_MaNV.Text = "Mã Nhân Viên";
         }
 
         private void Btn_XacNhan_Click(object sender, EventArgs e)

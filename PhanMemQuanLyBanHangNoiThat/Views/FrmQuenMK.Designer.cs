@@ -35,9 +35,11 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.LB_QuenMK = new System.Windows.Forms.Label();
             this.Btn_XacNhan = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Lb_NV = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Txt_MaNV = new System.Windows.Forms.TextBox();
+            this.Lb_NgaySinh = new System.Windows.Forms.Label();
+            this.DP_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -94,24 +96,26 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Azure;
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.DP_NgaySinh);
+            this.panel2.Controls.Add(this.Lb_NgaySinh);
+            this.panel2.Controls.Add(this.Lb_NV);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.Txt_MaNV);
             this.panel2.Location = new System.Drawing.Point(197, 58);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(517, 48);
+            this.panel2.Size = new System.Drawing.Size(517, 101);
             this.panel2.TabIndex = 20;
             // 
-            // label1
+            // Lb_NV
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(61, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 10);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Mã Nhân Viên:";
+            this.Lb_NV.AutoSize = true;
+            this.Lb_NV.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Lb_NV.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Lb_NV.Location = new System.Drawing.Point(61, 10);
+            this.Lb_NV.Name = "Lb_NV";
+            this.Lb_NV.Size = new System.Drawing.Size(65, 10);
+            this.Lb_NV.TabIndex = 2;
+            this.Lb_NV.Text = "Mã Nhân Viên:";
             // 
             // pictureBox2
             // 
@@ -134,15 +138,36 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Txt_MaNV.ShortcutsEnabled = false;
             this.Txt_MaNV.Size = new System.Drawing.Size(450, 35);
             this.Txt_MaNV.TabIndex = 0;
+            this.Txt_MaNV.Enter += new System.EventHandler(this.Txt_MaNV_Enter);
             this.Txt_MaNV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_MaNV_KeyDown);
             this.Txt_MaNV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_MaNV_KeyPress);
+            this.Txt_MaNV.Leave += new System.EventHandler(this.Txt_MaNV_Leave);
+            // 
+            // Lb_NgaySinh
+            // 
+            this.Lb_NgaySinh.AutoSize = true;
+            this.Lb_NgaySinh.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Lb_NgaySinh.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Lb_NgaySinh.Location = new System.Drawing.Point(3, 51);
+            this.Lb_NgaySinh.Name = "Lb_NgaySinh";
+            this.Lb_NgaySinh.Size = new System.Drawing.Size(50, 10);
+            this.Lb_NgaySinh.TabIndex = 3;
+            this.Lb_NgaySinh.Text = "Ngày Sinh:";
+            // 
+            // DP_NgaySinh
+            // 
+            this.DP_NgaySinh.Location = new System.Drawing.Point(5, 65);
+            this.DP_NgaySinh.Name = "DP_NgaySinh";
+            this.DP_NgaySinh.Size = new System.Drawing.Size(508, 21);
+            this.DP_NgaySinh.TabIndex = 4;
+            this.DP_NgaySinh.Value = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             // 
             // FrmQuenMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(933, 136);
+            this.ClientSize = new System.Drawing.Size(933, 185);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Btn_XacNhan);
@@ -170,8 +195,10 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
         private System.Windows.Forms.Label LB_QuenMK;
         private System.Windows.Forms.Button Btn_XacNhan;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Lb_NV;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox Txt_MaNV;
+        private System.Windows.Forms.DateTimePicker DP_NgaySinh;
+        private System.Windows.Forms.Label Lb_NgaySinh;
     }
 }

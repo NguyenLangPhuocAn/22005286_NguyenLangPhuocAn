@@ -125,7 +125,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             e.Handled = InputIsCommand;
             if (Char.IsLetter(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar))
             {
-               e.Handled = true;
+                e.Handled = true;
                 MessageBox.Show("Vui Lòng Nhập Mỗi Số", "Thông Báo");
             }
         }
@@ -139,6 +139,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 Btn_Them.Enabled = false;
                 Txt_DiaChi.ReadOnly = true;
                 Txt_SDT.ReadOnly = true;
+                Txt_MaKh.ReadOnly = true;
                 Txt_Ten.ReadOnly = true;
                 Btn_Xoa.Text = "Xác Nhận";
             }
@@ -174,6 +175,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 Txt_SDT.ReadOnly = false;
                 Txt_Ten.ReadOnly = false;
                 Btn_Xoa.Text = "Xóa";
+                Txt_MaKh.ReadOnly = false;
             }
         }
 
@@ -234,6 +236,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                                     Btn_Them.Enabled = true;
                                     Txt_MaKh.ReadOnly = false;
                                     Btn_Sua.Text = "Sửa";
+                                    load();
                                 }
                             }
                         }
@@ -254,11 +257,20 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
 
         private void Btn_Tim_Click(object sender, EventArgs e)
         {
-            DataTable db = (DataTable)DGV_KH.DataSource;
-            db.DefaultView.RowFilter = String.Format("CONVERT(MaKH,System.String) LIKE '%{0}%' And TenKH LIKE '%{1}%' And DiaChi LIKE '%{2}%' And SDT LIKE '%{3}%' ", Txt_MaKh.Text, Txt_Ten.Text, Txt_DiaChi.Text, Txt_SDT.Text);
-            if (DGV_KH.Rows.Count == 0)
+            if (Btn_Tim.Text == "Tìm Kiếm")
             {
-                MessageBox.Show("Không Có Khách Hàng Này", "Thông Báo");
+                DataTable db = (DataTable)DGV_KH.DataSource;
+                db.DefaultView.RowFilter = String.Format("CONVERT(MaKH,System.String) LIKE '%{0}%' And TenKH LIKE '%{1}%' And DiaChi LIKE '%{2}%' And SDT LIKE '%{3}%' ", Txt_MaKh.Text, Txt_Ten.Text, Txt_DiaChi.Text, Txt_SDT.Text);
+                if (DGV_KH.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không Có Khách Hàng Này", "Thông Báo");
+                    load();
+                }
+                Btn_Tim.Text = "Xác Nhận";
+            }
+            else
+            {
+                Btn_Tim.Text = "Tìm Kiếm";
                 load();
             }
         }

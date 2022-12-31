@@ -68,10 +68,13 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
 
         private void Txt_Password_Enter(object sender, EventArgs e)
         {
+                Lb_MK.Text = "";
+        }
+
+        private void Txt_Password_Leave(object sender, EventArgs e)
+        {
             if (Txt_Password.TextLength == 0)
-                label3.Text = "Mật Khẩu";
-            else
-                label3.Text = "";
+                Lb_MK.Text = "Mật Khẩu";
         }
     }
 }

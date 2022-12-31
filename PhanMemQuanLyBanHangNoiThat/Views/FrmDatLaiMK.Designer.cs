@@ -34,7 +34,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Lb1 = new System.Windows.Forms.Label();
             this.Btn_XacNhan = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Lb_MK = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Txt_Password = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
@@ -79,7 +79,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Azure;
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.Lb_MK);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Controls.Add(this.Txt_Password);
             this.panel3.Location = new System.Drawing.Point(13, 58);
@@ -87,16 +87,16 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.panel3.Size = new System.Drawing.Size(517, 48);
             this.panel3.TabIndex = 26;
             // 
-            // label3
+            // Lb_MK
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Location = new System.Drawing.Point(61, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 10);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Mật Khẩu:";
+            this.Lb_MK.AutoSize = true;
+            this.Lb_MK.Font = new System.Drawing.Font("Verdana", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Lb_MK.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Lb_MK.Location = new System.Drawing.Point(61, 9);
+            this.Lb_MK.Name = "Lb_MK";
+            this.Lb_MK.Size = new System.Drawing.Size(48, 10);
+            this.Lb_MK.TabIndex = 3;
+            this.Lb_MK.Text = "Mật Khẩu:";
             // 
             // pictureBox3
             // 
@@ -123,6 +123,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Txt_Password.Enter += new System.EventHandler(this.Txt_Password_Enter);
             this.Txt_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Password_KeyDown);
             this.Txt_Password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Password_KeyPress);
+            this.Txt_Password.Leave += new System.EventHandler(this.Txt_Password_Leave);
             // 
             // FrmDatLaiMK
             // 
@@ -151,7 +152,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
         private System.Windows.Forms.Label Lb1;
         private System.Windows.Forms.Button Btn_XacNhan;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Lb_MK;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox Txt_Password;
     }

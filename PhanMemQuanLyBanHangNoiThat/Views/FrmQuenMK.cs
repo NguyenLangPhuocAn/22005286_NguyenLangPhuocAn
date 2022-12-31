@@ -33,38 +33,62 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 }
                 else
                 {
-                    bool rs = false;
-                    try
+                    bool rec = false;
+                    Txt_MaNV.Text = "10000";
+                    rec = Users.CheckNVQuenMK(Txt_MaNV.Text, DP_NgaySinh.Value);
+                    if (rec != false)
                     {
-                        rs = Users.LayMaNVTrongHeThong(Txt_MaNV.Text);
-                        if (rs != false)
+                        bool rs = false;
+                        try
                         {
-                            bool sth = false;
-                            try
+                            rs = Users.LayMaNVTrongHeThong(Txt_MaNV.Text);
+                            if (rs != false)
                             {
-                                sth = Users.QuenMK(Txt_MaNV.Text);
-                                if (sth != false)
+                                bool sth = false;
+                                try
                                 {
-                                    DialogResult tb = MessageBox.Show("Đã Gửi Yêu Cầu Tới Quản Lý, Vui Lòng Gặp Quản Lý Để Lấy Mật Khẩu", "Thông Báo", MessageBoxButtons.OK);
-                                    if (tb == DialogResult.OK)
+                                    char[] words = "abcdefghjklmnopqrstuwxyzABCDEFGHJKLMNOPRQWIEUROTXZCVB".ToCharArray();
+                                    Random ran = new Random();
+                                    string Pass = "";
+                                    for (int i = 0; i <= 5; i++)
+                                    {
+                                        Pass = Pass + words[ran.Next(0, words.Length)].ToString();
+                                    }
+                                    MessageBox.Show("Vui Lòng Viết Lại Pass: " + Pass, "Thông Báo");
+                                    try
+                                    {
+                                        sth = Users.UpdatePassWordChoNhanVienQuen(Txt_MaNV.Text, Pass);
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        MessageBox.Show("Nhân Viên Không Đổi Mật Khẩu Được Liên Hệ Quản Lý", "Thông Báo");
+                                    }
+                                    if (sth != false)
+                                    {
+                                        MessageBox.Show("Nhân Viên Đổi Pass Thành Công", "Thông Báo");
                                         this.Close();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Nhân Viên Không Có Trong Hệ Thống", "Thông Báo");
+                                    }
                                 }
-                                else
+                                catch (Exception ex)
                                 {
-                                    MessageBox.Show("Nhân Viên Không Có Trong Hệ Thống");
+                                    MessageBox.Show("Nhân Viên Không Được Phân Quyền", "Thông Báo");
                                 }
                             }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("Nhân Viên Không Có Trong Hệ Thống");
-                            }
+                            else
+                                MessageBox.Show("Nhân Viên Không Được Phân Quyền", "Thông Báo");
                         }
-                        else
-                            MessageBox.Show("Nhân Viên Không Có Trong Hệ Thống");
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Nhân Viên Không Có Trong Hệ Thống", "Thông Báo");
+                        }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show("Nhân Viên Không Có Trong Hệ Thống");
+                        MessageBox.Show("Sai Mã Nhân Viên Hoặc Ngày Sinh", "Thông Báo");
                     }
                 }
             }
@@ -80,6 +104,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             if (Char.IsLetter(e.KeyChar) || Char.IsSymbol(e.KeyChar) || Char.IsWhiteSpace(e.KeyChar) || Char.IsPunctuation(e.KeyChar))
             {
                 e.Handled = true;
+                MessageBox.Show("Vui Lòng Nhập Số", "Thông Báo");
             }
         }
 
@@ -88,5 +113,15 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Close();
         }
 
+        private void Txt_MaNV_Enter(object sender, EventArgs e)
+        {
+            Lb_NV.Text = "";
+        }
+
+        private void Txt_MaNV_Leave(object sender, EventArgs e)
+        {
+            if (Txt_MaNV.Text.Length == 0)
+                Lb_NV.Text = "Mã Nhân Viên";
+        }
     }
 }

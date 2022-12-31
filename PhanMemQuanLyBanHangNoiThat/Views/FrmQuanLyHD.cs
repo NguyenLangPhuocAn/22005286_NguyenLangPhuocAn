@@ -247,11 +247,12 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                     MessageBox.Show("Không Có Hóa Đơn Này", "Thông Báo");
                     load();
                 }
-                Btn_Tim.Text = "Hoàn Trả";
+                Btn_Tim.Text = "Xác Nhận";
             }
             else
+            {
                 load();
-
+            }
         }
         private void DGV_HD_SelectionChanged(object sender, EventArgs e)
         {
