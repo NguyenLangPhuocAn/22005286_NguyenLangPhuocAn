@@ -59,7 +59,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                             MessageBox.Show("Vui Lòng Nhập Số Điện Thoại", "Thông Báo");
                         else
                         {
-                            if (Txt_SDT.Text.Length < 10)
+                            if (Txt_SDT.Text.Length <= 10)
                                 MessageBox.Show("Vui Lòng Nhập Đủ 10 Số Điện Thoại", "Thông Báo");
                             else
                             {
