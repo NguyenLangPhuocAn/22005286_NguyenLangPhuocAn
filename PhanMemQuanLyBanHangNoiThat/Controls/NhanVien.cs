@@ -86,6 +86,25 @@ namespace PhanMemQuanLyBanHangNoiThat.Controls
             else
                 return false;
         }
+        public bool DeleteUsers(String MaNV)
+        {
+            int rec = 0;
+            if (db.connect())
+            {
+                string strcmd = "delete from Users where MaNV=@MaNV";
+                SqlCommand Cmd = new SqlCommand(strcmd, db.connection);
+                Cmd.Parameters.Add(new SqlParameter("@MaNV", MaNV));
+                rec = (int)Cmd.ExecuteNonQuery();
+            }
+            else
+            {
+                rec = -1;
+            }
+            if (rec == 1)
+                return true;
+            else
+                return false;
+        }
         public DataTable LayGhiChu()
         {
             DataTable tbl = new DataTable();

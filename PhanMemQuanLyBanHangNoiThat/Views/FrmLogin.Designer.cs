@@ -282,7 +282,6 @@ namespace PhanMemQuanLyBanHangNoiThat
             this.Name = "Frm_DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
-            this.Load += new System.EventHandler(this.Frm_DangNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P_Main)).EndInit();

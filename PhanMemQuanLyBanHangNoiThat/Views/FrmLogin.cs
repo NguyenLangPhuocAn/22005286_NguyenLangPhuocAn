@@ -87,9 +87,6 @@ namespace PhanMemQuanLyBanHangNoiThat
                 MessageBox.Show("Vui Lòng Nhập Mỗi Số", "Thông Báo");
             }
         }
-        private void Frm_DangNhap_Load(object sender, EventArgs e)
-        {
-        }
 
         private void Txt_MaNV_KeyDown(object sender, KeyEventArgs e)
         {

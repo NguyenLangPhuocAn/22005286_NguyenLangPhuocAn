@@ -43,14 +43,20 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
         {
             e.Handled = InputIsCommand;
             if (Char.IsLetter(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar))
+            {
                 e.Handled = true;
+                MessageBox.Show("Vui Lòng Không Nhập Chữ", "Thông Báo");
+            }
         }
 
         private void Txt_Ten_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = InputIsCommand;
             if (Char.IsNumber(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar))
+            {
                 e.Handled = true;
+                MessageBox.Show("Vui Lòng Không Nhập Số", "Thông Báo");
+            }
         }
 
         private void Btn_Them_Click(object sender, EventArgs e)
@@ -132,15 +138,27 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             else if (Btn_Xoa.Text == "Xác Nhận")
             {
                 bool rec = false;
+                bool rec1 = false;
+                foreach (DataGridViewRow row in DGV_CapMK.Rows)
+                {
+                    if (Txt_MaNV.Text == row.Cells[0].Value.ToString())
+                    {
+                        rec1 = true;
+                    }
+                }
                 try
                 {
+                    if (rec1 == true)
+                    {
+                       rec1=nv.DeleteUsers(Txt_MaNV.Text);
+                    }
                     rec = nv.DeleteNhanVien(Txt_MaNV.Text);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Không Xóa Được", "Thông Báo");
                 }
-                if (rec != false)
+                if (rec != false || rec1 != false)
                 {
                     MessageBox.Show("Bạn Đã Xóa 1 Nhân Viên", "Thông Báo");
                     load();
@@ -225,13 +243,19 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
 
         private void Btn_Tim_Click(object sender, EventArgs e)
         {
-            DataTable db = (DataTable)DGV_NV.DataSource;
-            db.DefaultView.RowFilter = String.Format("MaNV LIKE '%{0}%' And TenNV LIKE '%{1}%' And CONVERT(MaCV,System.String) LIKE '%{2}%'", Txt_MaNV.Text, Txt_Ten.Text, CB_CV.SelectedValue);
-            if (DGV_NV.Rows.Count == 0)
+            if (Btn_Tim.Text == "Tìm Kiếm")
             {
-                MessageBox.Show("Không Có Nhân Viên Này", "Thông Báo");
-                load();
+                DataTable db = (DataTable)DGV_NV.DataSource;
+                db.DefaultView.RowFilter = String.Format("MaNV LIKE '%{0}%' And TenNV LIKE '%{1}%' And CONVERT(MaCV,System.String) LIKE '%{2}%'", Txt_MaNV.Text, Txt_Ten.Text, CB_CV.SelectedValue);
+                if (DGV_NV.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không Có Nhân Viên Này", "Thông Báo");
+                    load();
+                }
+                Btn_Tim.Text = "Xác Nhận";
             }
+            else
+                load();
         }
 
         private void DGV_NV_SelectionChanged(object sender, EventArgs e)

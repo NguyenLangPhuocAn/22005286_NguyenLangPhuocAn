@@ -124,7 +124,10 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
         {
             e.Handled = InputIsCommand;
             if (Char.IsLetter(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar))
-                e.Handled = true;
+            {
+               e.Handled = true;
+                MessageBox.Show("Vui Lòng Nhập Mỗi Số", "Thông Báo");
+            }
         }
 
         private void Btn_Xoa_Click(object sender, EventArgs e)
