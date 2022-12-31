@@ -10,8 +10,8 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
         NhanVien nv = new NhanVien();
         bool InputIsCommand = false;
         public FrmQuanLyNV()
-        {
-            InitializeComponent();
+        {           
+            InitializeComponent();          
         }
         private void load()
         {
@@ -28,8 +28,8 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
         }
         private void FrmQuanLyNV_Load(object sender, EventArgs e)
         {
-            load();
             clear_text();
+            load();
         }
         private void clear_text()
         {
