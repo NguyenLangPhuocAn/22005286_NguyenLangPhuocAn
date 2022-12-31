@@ -29,7 +29,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             {
                 if (Txt_MaNV.Text.Length < 5)
                 {
-                    MessageBox.Show("Vui Lòng Nhập Mã Nhân Viên Từ 3 Ký Tự Trở Lên");
+                    MessageBox.Show("Vui Lòng Nhập Mã Nhân Viên Từ 4 Ký Tự Trở Lên");
                 }
                 else
                 {
