@@ -141,6 +141,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 Txt_SL.ReadOnly = true;
                 Txt_TongTien.ReadOnly = true;
                 Cb_VT.Enabled = false;
+                Txt_MaHD.ReadOnly = true;
                 Btn_Xoa.Text = "Xác Nhận";
             }
 
@@ -178,6 +179,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                     Btn_Them.Enabled = true;
                     Txt_MaKH.ReadOnly = false;
                     Txt_SL.ReadOnly = false;
+                    Txt_MaHD.ReadOnly = false;
                     Txt_TongTien.ReadOnly = false;
                     Cb_VT.Enabled = true;
                     Btn_Xoa.Text = "Xóa";
