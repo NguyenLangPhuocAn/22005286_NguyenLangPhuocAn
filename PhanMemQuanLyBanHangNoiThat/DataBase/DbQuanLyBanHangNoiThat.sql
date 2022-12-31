@@ -118,6 +118,6 @@ update HOADON Set TongTien='70000'Where MaHD=2
 update HOADON Set TongTien='135000'Where MaHD=3
 update HOADON Set TongTien='3000'Where MaHD=4
 
-insert into Users values('10000','123')
-insert into Users values('10001','123')
-insert into Users values('10002','123')
+insert into Users values('10000','123','')
+insert into Users values('10001','123','')
+insert into Users values('10002','123','')
