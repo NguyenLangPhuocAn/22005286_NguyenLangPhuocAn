@@ -8,7 +8,7 @@ Microsoft SQL Server 2019
 
 # Hướng dẫn
 
-Dùng SSMS run query DbQuanLyBanHangNoiThat.sql
+Dùng SSMS run query \PhanMemQuanLyBanHangNoiThat\DataBase\DbQuanLyBanHangNoiThat.sql
 
 Dùng Visual Studio mở PhanMemQuanLyBanHangNoiThat.sln
 
