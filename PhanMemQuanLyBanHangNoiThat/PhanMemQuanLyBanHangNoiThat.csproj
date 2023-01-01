@@ -79,7 +79,7 @@
     <Compile Include="Controls\NhaCC.cs" />
     <Compile Include="Controls\NhanVien.cs" />
     <Compile Include="Controls\ThongKe.cs" />
-    <Compile Include="Controls\Userlogin.cs" />
+    <Compile Include="Controls\Users.cs" />
     <Compile Include="Controls\VatTu.cs" />
     <Compile Include="Models\DataProvider.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
