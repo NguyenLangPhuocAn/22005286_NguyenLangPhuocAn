@@ -276,7 +276,6 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 {
                     MessageBox.Show("Không Có Nhà Cung Cấp Này", "Thông Báo");
                     load();
-                    Btn_Tim.Text = "Tìm Kiếm";
                 }
             }
             else if (Btn_Tim.Text == "Xác Nhận")

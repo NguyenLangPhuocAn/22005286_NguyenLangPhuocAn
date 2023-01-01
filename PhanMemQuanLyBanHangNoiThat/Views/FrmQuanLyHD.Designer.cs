@@ -187,7 +187,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_Them.ForeColor = System.Drawing.Color.White;
             this.Btn_Them.Image = global::PhanMemQuanLyBanHangNoiThat.Properties.Resources.add;
             this.Btn_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Them.Location = new System.Drawing.Point(12, 505);
+            this.Btn_Them.Location = new System.Drawing.Point(12, 507);
             this.Btn_Them.Name = "Btn_Them";
             this.Btn_Them.Size = new System.Drawing.Size(138, 34);
             this.Btn_Them.TabIndex = 70;

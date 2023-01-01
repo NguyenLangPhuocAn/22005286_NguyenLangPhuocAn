@@ -86,7 +86,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             }
             else
             {
-                if (DGV_HD.Rows.Count <= 0)
+                if (DGV_CTHD.Rows.Count <= 0)
                 {
                     MessageBox.Show("Vui Lòng Thêm Sản Phẩm", "Thông Báo");
                 }
@@ -208,30 +208,37 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 }
                 else
                 {
-                    try
+                    if (DGV_CTHD.Rows.Count == 0)
                     {
-                        rec = Hoadon.UpdateHoaDon(Convert.ToInt32(Txt_MaHD.Text), Convert.ToInt32(Txt_MaKH.Text), Convert.ToInt32(Txt_TongTien.Text));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Sửa Không Được", "Thông Báo");
-                    }
-                    if (rec != false)
-                    {
-                        MessageBox.Show("Bạn Đã Sửa Hóa Đơn Thành Công", "Thông Báo");
-                        load();
+                        MessageBox.Show("Vui Lòng Thêm Sản Phẩm", "Thông Báo");
                     }
                     else
                     {
-                        MessageBox.Show("Sửa Không Thành Công", "Thông Báo");
+                        try
+                        {
+                            rec = Hoadon.UpdateHoaDon(Convert.ToInt32(Txt_MaHD.Text), Convert.ToInt32(Txt_MaKH.Text), Convert.ToInt32(Txt_TongTien.Text));
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Sửa Không Được", "Thông Báo");
+                        }
+                        if (rec != false)
+                        {
+                            MessageBox.Show("Bạn Đã Sửa Hóa Đơn Thành Công", "Thông Báo");
+                            load();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sửa Không Thành Công", "Thông Báo");
+                        }
+                        Disable();
+                        DGV_HD.Enabled = true;
+                        Btn_Xoa.Enabled = true;
+                        Btn_Tim.Enabled = true;
+                        Btn_Them.Enabled = true;
+                        Txt_MaHD.ReadOnly = false;
+                        Btn_Sua.Text = "Sửa";
                     }
-                    Disable();
-                    DGV_HD.Enabled = true;
-                    Btn_Xoa.Enabled = true;
-                    Btn_Tim.Enabled = true;
-                    Btn_Them.Enabled = true;
-                    Txt_MaHD.ReadOnly = false;
-                    Btn_Sua.Text = "Sửa";
                 }
             }
         }
@@ -356,7 +363,6 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
                 MessageBox.Show("Không Xóa Được Hàng Này", "Thông Báo");
             }
             if (rec != false)
@@ -376,7 +382,6 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             {
                 Txt_TongTien.Text = "0";
             }
-
         }
 
         private void Btn_ThemHang_Click(object sender, EventArgs e)
