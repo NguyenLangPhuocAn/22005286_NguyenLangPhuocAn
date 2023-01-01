@@ -157,7 +157,6 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Xóa Không Thành Công", "Thông Báo");
                 }
                 if (rec != false)
                 {
