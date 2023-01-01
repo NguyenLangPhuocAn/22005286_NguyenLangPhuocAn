@@ -34,7 +34,6 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
                 else
                 {
                     bool rec = false;
-                    Txt_MaNV.Text = "10000";
                     rec = Users.CheckNVQuenMK(Txt_MaNV.Text, DP_NgaySinh.Value);
                     if (rec != false)
                     {

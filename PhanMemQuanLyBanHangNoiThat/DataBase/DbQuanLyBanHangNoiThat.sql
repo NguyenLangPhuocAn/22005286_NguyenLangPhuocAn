@@ -86,9 +86,9 @@ insert into NhanVien values ('10005',N'Nguyễn Văn F','2004-07-14','01')
 insert into NhanVien values ('10006',N'Nguyễn Văn G','2004-06-14','01')
 insert into NhanVien values ('10007',N'Nguyễn Văn H','2004-08-15','01')
 
-insert into NhaCC values('JG01',N'Cty TNHH Nội Thất','12/78 Phan Đình Phùng Q.7','01597536842')
-insert into NhaCC values('SP01',N'Cty TNHH Vật Liệu','12/77 Phan Đình Phùng Q.7','01597536843')
-insert into NhaCC values('AD01',N'Cty TNHH Điện Lực','12/76 Phan Đình Phùng Q.7','01597536464')
+insert into NhaCC values('JG01',N'Cty TNHH Nội Thất','12/78 Phan Đình Phùng Q.7','0159753684')
+insert into NhaCC values('SP01',N'Cty TNHH Vật Liệu','12/77 Phan Đình Phùng Q.7','0159753684')
+insert into NhaCC values('AD01',N'Cty TNHH Điện Lực','12/76 Phan Đình Phùng Q.7','0159753646')
 
 insert into VatTu values('MID01',N'Bàn Gỗ','JG01',10,29000)
 insert into VatTu values('MID02',N'Ghế Gỗ','JG01',10,35000)
