@@ -93,7 +93,7 @@ insert into NhaCC values('AD01',N'Cty TNHH Điện Lực','12/76 Phan Đình Ph�
 insert into VatTu values('MID01',N'Bàn Gỗ','JG01',10,29000)
 insert into VatTu values('MID02',N'Ghế Gỗ','JG01',10,35000)
 insert into VatTu values('TOP01',N'Thép','SP01',10,45000)
-insert into VatTu values('TOP02',N'Gỗ','SP01',10,35000)
+insert into VatTu values('TOP02',N'Gỗ Liêm','SP01',10,35000)
 insert into VatTu values('BOT01',N'Bóng Đèn','AD01',10,1000)
 
 insert into KhachHang values(N'Nguyễn Văn A',N'12/34 Phan Đình Phùng Q.PN','0123456785')
