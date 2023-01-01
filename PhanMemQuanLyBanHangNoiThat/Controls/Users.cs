@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace PhanMemQuanLyBanHangNoiThat.Controls
 {
-    class Userlogin
+    class Users
     {
         DataProvider Db = new DataProvider();
         public bool getlogin(string MaNV, string pass)

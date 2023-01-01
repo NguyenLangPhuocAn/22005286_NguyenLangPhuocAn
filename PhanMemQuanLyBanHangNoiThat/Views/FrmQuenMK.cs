@@ -20,7 +20,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
 
         private void Btn_XacNhan_Click(object sender, EventArgs e)
         {
-            Userlogin Users = new Userlogin();
+            Users Users = new Users();
             if (Txt_MaNV.Text.Length == 0)
             {
                 MessageBox.Show("Vui Lòng Nhập Mã Nhân Viên");

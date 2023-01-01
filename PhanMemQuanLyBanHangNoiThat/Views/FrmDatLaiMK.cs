@@ -22,7 +22,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
         bool InputIsCommand = false;
         private void Btn_XacNhan_Click(object sender, EventArgs e)
         {
-            Userlogin user = new Userlogin();
+            Users user = new Users();
             if (Txt_Password.Text.Length == 0)
             {
                 MessageBox.Show("Vui Lòng Nhập Mật Khẩu");

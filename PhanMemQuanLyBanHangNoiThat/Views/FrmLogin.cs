@@ -17,7 +17,7 @@ namespace PhanMemQuanLyBanHangNoiThat
         bool InputIsCommand = false;
         private void Btn_Login_Click(object sender, EventArgs e)
         {
-            Userlogin Users = new Userlogin();
+            Users Users = new Users();
             string CV;
             if (Txt_MaNV.Text.Length == 0)
             {
