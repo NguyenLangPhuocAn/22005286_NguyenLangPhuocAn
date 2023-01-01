@@ -28,7 +28,10 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
         {
             e.Handled = InputIsCommand;
             if (Char.IsNumber(e.KeyChar) || Char.IsPunctuation(e.KeyChar) || Char.IsSymbol(e.KeyChar))
+            {
                 e.Handled = true;
+                MessageBox.Show("Vui Lòng Nhập Mỗi Chữ", "Thông Báo");
+            }
         }
 
         private void Txt_SDT_KeyPress(object sender, KeyPressEventArgs e)

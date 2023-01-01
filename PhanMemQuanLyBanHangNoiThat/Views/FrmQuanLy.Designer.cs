@@ -70,7 +70,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Panel_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Panel_Menu.Location = new System.Drawing.Point(0, 0);
             this.Panel_Menu.Name = "Panel_Menu";
-            this.Panel_Menu.Size = new System.Drawing.Size(228, 745);
+            this.Panel_Menu.Size = new System.Drawing.Size(248, 745);
             this.Panel_Menu.TabIndex = 0;
             // 
             // Btn_CapMK
@@ -85,7 +85,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_CapMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_CapMK.Location = new System.Drawing.Point(0, 664);
             this.Btn_CapMK.Name = "Btn_CapMK";
-            this.Btn_CapMK.Size = new System.Drawing.Size(228, 72);
+            this.Btn_CapMK.Size = new System.Drawing.Size(248, 72);
             this.Btn_CapMK.TabIndex = 8;
             this.Btn_CapMK.Text = "Cấp Lại Mật Khẩu Cho Nhân Viên";
             this.Btn_CapMK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -105,7 +105,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_DatMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_DatMK.Location = new System.Drawing.Point(0, 592);
             this.Btn_DatMK.Name = "Btn_DatMK";
-            this.Btn_DatMK.Size = new System.Drawing.Size(228, 72);
+            this.Btn_DatMK.Size = new System.Drawing.Size(248, 72);
             this.Btn_DatMK.TabIndex = 7;
             this.Btn_DatMK.Text = "Đặt Lại Mật Khẩu";
             this.Btn_DatMK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -125,7 +125,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_TK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_TK.Location = new System.Drawing.Point(0, 520);
             this.Btn_TK.Name = "Btn_TK";
-            this.Btn_TK.Size = new System.Drawing.Size(228, 72);
+            this.Btn_TK.Size = new System.Drawing.Size(248, 72);
             this.Btn_TK.TabIndex = 6;
             this.Btn_TK.Text = "Báo Cáo Thống Kê";
             this.Btn_TK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -145,7 +145,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_VT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_VT.Location = new System.Drawing.Point(0, 436);
             this.Btn_VT.Name = "Btn_VT";
-            this.Btn_VT.Size = new System.Drawing.Size(228, 84);
+            this.Btn_VT.Size = new System.Drawing.Size(248, 84);
             this.Btn_VT.TabIndex = 5;
             this.Btn_VT.Text = "Quản Lý Vật Tư";
             this.Btn_VT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -165,7 +165,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_NhaCC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_NhaCC.Location = new System.Drawing.Point(0, 352);
             this.Btn_NhaCC.Name = "Btn_NhaCC";
-            this.Btn_NhaCC.Size = new System.Drawing.Size(228, 84);
+            this.Btn_NhaCC.Size = new System.Drawing.Size(248, 84);
             this.Btn_NhaCC.TabIndex = 4;
             this.Btn_NhaCC.Text = "Quản Lý Nhà Cung Cấp";
             this.Btn_NhaCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -185,7 +185,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_KH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_KH.Location = new System.Drawing.Point(0, 268);
             this.Btn_KH.Name = "Btn_KH";
-            this.Btn_KH.Size = new System.Drawing.Size(228, 84);
+            this.Btn_KH.Size = new System.Drawing.Size(248, 84);
             this.Btn_KH.TabIndex = 3;
             this.Btn_KH.Text = "Quản Lý Khách Hàng";
             this.Btn_KH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -205,7 +205,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_HD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_HD.Location = new System.Drawing.Point(0, 184);
             this.Btn_HD.Name = "Btn_HD";
-            this.Btn_HD.Size = new System.Drawing.Size(228, 84);
+            this.Btn_HD.Size = new System.Drawing.Size(248, 84);
             this.Btn_HD.TabIndex = 2;
             this.Btn_HD.Text = "Quản Lý Hóa Đơn";
             this.Btn_HD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -225,7 +225,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_NV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_NV.Location = new System.Drawing.Point(0, 100);
             this.Btn_NV.Name = "Btn_NV";
-            this.Btn_NV.Size = new System.Drawing.Size(228, 84);
+            this.Btn_NV.Size = new System.Drawing.Size(248, 84);
             this.Btn_NV.TabIndex = 1;
             this.Btn_NV.Text = "Quản Lý Nhân Viên";
             this.Btn_NV.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -240,7 +240,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Panel_Clock.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Clock.Location = new System.Drawing.Point(0, 0);
             this.Panel_Clock.Name = "Panel_Clock";
-            this.Panel_Clock.Size = new System.Drawing.Size(228, 100);
+            this.Panel_Clock.Size = new System.Drawing.Size(248, 100);
             this.Panel_Clock.TabIndex = 0;
             // 
             // Lb_ThoiGian
@@ -265,9 +265,9 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Panel_Home.Controls.Add(this.Btn_X);
             this.Panel_Home.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Home.ForeColor = System.Drawing.Color.Black;
-            this.Panel_Home.Location = new System.Drawing.Point(228, 0);
+            this.Panel_Home.Location = new System.Drawing.Point(248, 0);
             this.Panel_Home.Name = "Panel_Home";
-            this.Panel_Home.Size = new System.Drawing.Size(1329, 100);
+            this.Panel_Home.Size = new System.Drawing.Size(1309, 100);
             this.Panel_Home.TabIndex = 1;
             // 
             // Btn_Home
@@ -290,7 +290,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_Hide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Hide.Font = new System.Drawing.Font("Verdana", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Btn_Hide.ForeColor = System.Drawing.Color.Red;
-            this.Btn_Hide.Location = new System.Drawing.Point(1124, 3);
+            this.Btn_Hide.Location = new System.Drawing.Point(1104, 3);
             this.Btn_Hide.Name = "Btn_Hide";
             this.Btn_Hide.Size = new System.Drawing.Size(64, 36);
             this.Btn_Hide.TabIndex = 12;
@@ -305,7 +305,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_Size.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Size.Font = new System.Drawing.Font("Verdana", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Btn_Size.ForeColor = System.Drawing.Color.Red;
-            this.Btn_Size.Location = new System.Drawing.Point(1193, 3);
+            this.Btn_Size.Location = new System.Drawing.Point(1173, 3);
             this.Btn_Size.Name = "Btn_Size";
             this.Btn_Size.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Btn_Size.Size = new System.Drawing.Size(64, 36);
@@ -321,7 +321,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             this.Btn_X.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_X.Font = new System.Drawing.Font("Verdana", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Btn_X.ForeColor = System.Drawing.Color.Red;
-            this.Btn_X.Location = new System.Drawing.Point(1263, 3);
+            this.Btn_X.Location = new System.Drawing.Point(1243, 3);
             this.Btn_X.Name = "Btn_X";
             this.Btn_X.Size = new System.Drawing.Size(64, 36);
             this.Btn_X.TabIndex = 10;
@@ -337,9 +337,9 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             // 
             this.Panel_Form.BackColor = System.Drawing.Color.GhostWhite;
             this.Panel_Form.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel_Form.Location = new System.Drawing.Point(228, 100);
+            this.Panel_Form.Location = new System.Drawing.Point(248, 100);
             this.Panel_Form.Name = "Panel_Form";
-            this.Panel_Form.Size = new System.Drawing.Size(1329, 645);
+            this.Panel_Form.Size = new System.Drawing.Size(1309, 645);
             this.Panel_Form.TabIndex = 2;
             // 
             // Frm_QL
