@@ -132,9 +132,9 @@ namespace PhanMemQuanLyBanHangNoiThat
             this.Lb_NameLogin.ForeColor = System.Drawing.Color.LightCyan;
             this.Lb_NameLogin.Location = new System.Drawing.Point(25, 258);
             this.Lb_NameLogin.Name = "Lb_NameLogin";
-            this.Lb_NameLogin.Size = new System.Drawing.Size(341, 28);
+            this.Lb_NameLogin.Size = new System.Drawing.Size(335, 28);
             this.Lb_NameLogin.TabIndex = 10;
-            this.Lb_NameLogin.Text = "Quản Lý Nhân Sự Và Vật Tư";
+            this.Lb_NameLogin.Text = "Quản Lý Bán Hàng Nội Thất";
             // 
             // P_Main
             // 
