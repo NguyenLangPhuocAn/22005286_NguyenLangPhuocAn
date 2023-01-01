@@ -61,7 +61,7 @@ namespace PhanMemQuanLyBanHangNoiThat.Views
             // 
             this.Txt_SDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_SDT.Location = new System.Drawing.Point(111, 135);
-            this.Txt_SDT.MaxLength = 11;
+            this.Txt_SDT.MaxLength = 10;
             this.Txt_SDT.Name = "Txt_SDT";
             this.Txt_SDT.ShortcutsEnabled = false;
             this.Txt_SDT.Size = new System.Drawing.Size(348, 20);
